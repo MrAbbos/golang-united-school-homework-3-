@@ -1,15 +1,14 @@
 package homework
 
+import "fmt"
+
 func sortMapValues(input map[int]string) (result []string) {
-	
-	for _, v := range input {
-		result = append(result, v)
-	}
-	for i := 0; i < len(input)-1; i++ {
-		for j := 0; j < len(input)-i-1; j++ {
-			if input[j] > input[j+1] {
-				input[j], input[j+1] = input[j+1], input[j]
-			}
+
+	fmt.Println(input)
+	for i := 0; i <= len(input); i++ {
+		fmt.Println(input[i], i)
+		if _, ok := input[i]; ok {
+			result = append(result, input[i])
 		}
 	}
 	return
